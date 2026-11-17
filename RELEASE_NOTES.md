@@ -1,5 +1,38 @@
 # Release Notes
 
+## v1.3.1 — 修复 HyperOS 4 小爱识屏跳转
+
+[下载地址 | Download Link](https://github.com/Xposed-Modules-Repo/com.hyperosfix.browser/releases/download/24-1.3.1/Fxxk-MiBrowser-v1.3.1.apk)
+
+### 中文
+
+- 修复 Android 17 未设置默认浏览器时，小爱识屏网页链接提示“当前未安装该应用”的问题；现在会回退到系统浏览器选择器。
+- 感谢 @wangjianghe-h 通过 [PR #16](https://github.com/DuhMatt/Fxxk-MiBrowser/pull/16) 修复该问题。
+- 更新 HyperAI 安装状态检查逻辑，适配新版类名变化。
+- 支持超级小爱 8.3.30.4420 的 utils.b3 识屏链路，并保留 utils.t2 兼容路径。
+
+### English
+
+- Fixed screen-recognition web links failing with an “App not installed” message on Android 17 when no default browser is set. Links now fall back to the Android chooser.
+- Thanks to @wangjianghe-h for contributing the fix in [PR #16](https://github.com/DuhMatt/Fxxk-MiBrowser/pull/16).
+- Updated HyperAI installation checks to support newer class names.
+- Added utils.b3 support for Super XiaoAi 8.3.30.4420 while retaining the utils.t2 compatibility path.
+
+### 兼容性验证环境 / Compatibility Verification Environments
+
+| 设备 / Device | 系统版本 / System build | Android | 超级小爱 / Super XiaoAi | 小米澎湃 AI 引擎 / Xiaomi HyperAI |
+| --- | --- | --- | --- | --- |
+| `nezha` | `OS4.0.7.0` | 17 | `8.3.30.4420` | `4.13.10` |
+| `ishtar` | `OS3.0.308.0` | 16 | `7.13.35.0012` | `3.80.6` |
+
+### APK
+
+- 普通用户下载普通版 APK；Log 版仅用于运行日志记录和问题排查。
+- [下载 Log APK | Download Log APK](https://github.com/DuhMatt/Fxxk-MiBrowser/releases/download/v1.3.1/app-debug.apk)
+- Regular users should download the standard APK. Use the Log APK only for runtime logging and issue diagnosis.
+
+---
+
 ## v1.2.12 — Super XiaoAi 8.2.3.1616
 
 > ⚠️ **重要兼容性警告：本版本尚未在 HyperOS 3 上进行真机测试，可能存在兼容性问题。HyperOS 3 用户请谨慎更新；如果遇到问题，建议回退到 v1.2.9。**
